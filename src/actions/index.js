@@ -19,7 +19,7 @@ export const onUserLogout = () => {
 }
 export const keepLogin = (username) => {
     return (dispatch) => {
-        axios.get('http://localhost:1991/keeplogin', {
+        axios.get('http://localhost:2019/keeplogin', {
             params: {
                 username
             }
@@ -41,7 +41,7 @@ export const onUserLogin = ({ username, password }) => {
             return dispatch({ type: HARUS_DIISI })
         }
         dispatch({ type: LOGIN_LOADING })
-        axios.post('http://localhost:1991/login', {
+        axios.post('http://localhost:2019/login', {
             username,
             password
         }).then((res) => {
@@ -63,13 +63,13 @@ export const onUserRegister = ({ username, email, password }) => {
         if (username === '' || password === '' || email === '') {
             dispatch({ type: HARUS_DIISI })
         } else {
-            axios.get('http://localhost:1991/usercheck', {
+            axios.get('http://localhost:2019/usercheck', {
                 params: {
                     username
                 }
             }).then((res) => {
                 if (res.data.length === 0) {
-                    axios.post('http://localhost:1991/register', {
+                    axios.post('http://localhost:2019/register', {
                         username, email, password
                     }).then((res) => {
                         console.log(res)
@@ -92,7 +92,7 @@ export const onUserRegister = ({ username, email, password }) => {
 export const addToItinerary = ({ username, id_product, now }) => {
     return (dispatch) => {
         dispatch({ type: LOGIN_LOADING })
-        axios.post('http://localhost:1991/addtoitinerary', {
+        axios.post('http://localhost:2019/addtoitinerary', {
             username,
             id_product,
             date: now
