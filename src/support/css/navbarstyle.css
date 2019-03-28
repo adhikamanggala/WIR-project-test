@@ -1,0 +1,15 @@
+/* nav.navbar.navbar-expand-md.navbar-light {
+   
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.wrapper.wrapper--w680 {
+    margin-top: 95px;
+    margin-bottom: 42px;
+} */
+nav.navbar.navbar-expand-md.navbar-light {
+    background-color: #26272b;
+}

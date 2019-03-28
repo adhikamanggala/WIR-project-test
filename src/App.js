@@ -11,6 +11,10 @@ import login from './component/screen/login';
 import register from './component/screen/register'
 import homeUser from './component/screen/homeUser';
 import Categories from './component/screen/Categories';
+import ManageProduct from './component/screen/ManageProduct';
+import Footer from './component/fitur/footer'
+import ReferProductDetail from './component/screen/ReferProductDetail';
+import Itinerary from './component/screen/Itinerary';
 
 
 
@@ -34,10 +38,12 @@ class App extends Component {
           <Route exact path='/register' component={register} />
           <Route path='/homes' component={homeUser} />
           <Route path='/categories' component={Categories} />
-
-
-
+          <Route path='/referproduct' component={ReferProductDetail} />
+          <Route path='/manageproduct' component={ManageProduct} />
+          <Route path='/itinerary' component={Itinerary} />
+          <Footer />
         </div>
+
       );
     }
     return (<div><center><h1>Loading...</h1></center></div>);

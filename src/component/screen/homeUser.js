@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
 import Axios from 'axios';
 import { API_REFER } from '../../actions/types';
 import '../../support/css/homeusercard.css';
+import Carousel from '../fitur/carousell';
 
 class homeUser extends Component {
 
@@ -44,15 +44,30 @@ class homeUser extends Component {
 
     render() {
         return (
-            <div className="container" >
-                <center>
-                    <div className="row" style={{ justifyContent: "center" }}>
-                        <h1>Categories</h1>
-                        <div className="row" style={{ justifyContent: "center", marginTop: "30px" }}>
-                            {this.putDataCategories()}
-                        </div>
+            <div>
+                <Carousel style={{ widht: '100%' }} />
+                <br />
+                <br />
+                <br />
+                <div className="main-card" >
+                    <div className="container" align="center">
+                        <h2 className="text-secondary">START YOUR EXTRAORDINARY JOURNEY HERE</h2>
+                        <h4 className="text-muted">Pick your favorite activity!</h4>
                     </div>
-                </center>
+                    <br />
+                    <br />
+                    <br />
+                    <center>
+                        <div className="row" style={{ justifyContent: "center" }}>
+                            <h1 className="text-secondary">Categories</h1>
+                            <div className="row" style={{ justifyContent: "center", marginTop: "30px" }}>
+                                {this.putDataCategories()}
+                            </div>
+                            <br />
+                            <br />
+                        </div>
+                    </center>
+                </div>
             </div>
         )
     }

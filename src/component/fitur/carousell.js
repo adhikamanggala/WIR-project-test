@@ -9,19 +9,19 @@ import {
 
 const items = [
   {
-    src: 'https://via.placeholder.com/1370x400?text=Visit+Dilizents.com+Now',
-    altText: 'Slide 1',
-    caption: 'Slide 1'
+    src: 'image/tabona.jpg',
+    altText: 'Medan',
+    caption: 'Rumah Makan Tabona'
   },
   {
-    src: 'https://via.placeholder.com/1370x400?text=Visit+Dilizents.com+Now',
-    altText: 'Slide 2',
-    caption: 'Slide 2'
+    src: 'image/bali-waterfall.jpg',
+    altText: 'Bali',
+    caption: 'Sekumpul Waterfall'
   },
   {
-    src: 'https://via.placeholder.com/1370x400?text=Visit+Dilizents.com+Now',
-    altText: 'Slide 3',
-    caption: 'Slide 3'
+    src: 'image/Bakmi-Pejagalan-Ami-Street_PIK-19-980x719.jpg',
+    altText: 'Jakarta',
+    caption: 'Bakmi Pejagalan'
   }
 ];
 

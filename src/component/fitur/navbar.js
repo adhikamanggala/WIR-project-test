@@ -17,6 +17,7 @@ import {
   DropdownItem
 } from 'reactstrap';
 import Cookies from "universal-cookie";
+import '../../support/css/navbarstyle.css';
 
 const cookies = new Cookies();
 
@@ -52,19 +53,19 @@ class Header extends React.Component {
     if (this.props.username === '') {
       return (
         <div>
-          <Navbar color="light" light expand="md">
+          <Navbar light expand="md" style={{ backgroundColor: '#26272b' }}>
             <NavbarBrand href="/" style={{ color: "#ff9100", fontFamily: 'Ubuntu, sans- serif', fontSize: '30pt', fontWeight: "900" }}>Refer</NavbarBrand>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
-                <NavItem>
-                  <NavLink href="/how-it-works">About</NavLink>
+                <NavItem >
+                  <NavLink href="/how-it-works" style={{ color: "gray" }}>About</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/register">Sign Up</NavLink>
+                  <NavLink href="/register" style={{ color: "gray" }}>Sign Up</NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="/login">Login</NavLink>
+                  <NavLink href="/login" style={{ color: "gray" }}>Login</NavLink>
                 </NavItem>
               </Nav>
             </Collapse>
@@ -73,29 +74,23 @@ class Header extends React.Component {
       );
     }
     return (
-      <Navbar light expand="md">
+      <Navbar light expand="md" style={{ backgroundColor: '#26272b' }}>
         <Link to='/homes'><NavbarBrand style={{ color: "#ff9100", fontFamily: 'Ubuntu, sans- serif', fontSize: '30pt', fontWeight: "900" }}>Refer</NavbarBrand></Link>
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="mr-auto" navbar>
           </Nav>
           <Nav className="ml-auto" navbar>
-            <NavItem>
-              <Link to='/diskusi'><NavLink>Itinerary</NavLink></Link>
+            <NavItem style={{ color: "gray" }}>
+              <Link to='/itinerary'><NavLink style={{ color: "gray" }}>My Itinerary</NavLink></Link>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
+              <DropdownToggle nav caret style={{ color: "gray" }}>
                 Hello, {this.props.username}
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem>
-                  Profile
-                </DropdownItem>
-                <Link to='/'><DropdownItem>
-                  Option
-                </DropdownItem></Link>
-                <DropdownItem divider />
-                <a href="/"><DropdownItem onClick={this.onLogOutSelect}>
+                <DropdownItem />
+                <a href="/"><DropdownItem onClick={this.onLogOutSelect} style={{ color: "gray" }}>
                   Log Out
                 </DropdownItem></a>
               </DropdownMenu>
